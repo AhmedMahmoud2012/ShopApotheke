@@ -18,3 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - I used lazy load tabs to display two screens 
 
 
+
+## Video Demo
+
+Kindly check this [Video Demo](https://drive.google.com/file/d/1DQJt5vYbZYvURwpvcSANGm0IFhk1UUhu/view)
