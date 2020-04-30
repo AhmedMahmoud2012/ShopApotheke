@@ -4,6 +4,11 @@ export interface Repository {
     full_name: string;
     description: string;
     url: string;
+    owner: {
+        avatar_url: string
+    },
+    html_url: string;
+    stargazers_count: number
 }
 
 export interface RepositoryResponse {
