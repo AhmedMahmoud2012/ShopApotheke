@@ -1,0 +1,25 @@
+<div id="github-container">
+    <mat-card>
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Most Popular Repositories">
+                <ng-template matTabContent>
+                    <app-filter-bar (change)="filterChange($event)"></app-filter-bar>
+                    <cdk-virtual-scroll-viewport *ngIf="items" itemSize="100" class="list-container-viewport">
+                        <div class="list-container">
+                            <mat-list>
+                                <app-repository *cdkVirtualFor="let item of dataSource" [item]="item"></app-repository>
+                            </mat-list>
+                        </div>
+                    </cdk-virtual-scroll-viewport>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Starred Repositories">
+                <ng-template matTabContent>
+                    <app-starred_repositories></app-starred_repositories>
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+
+
+</div>

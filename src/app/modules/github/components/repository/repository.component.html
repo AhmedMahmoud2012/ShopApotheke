@@ -1,0 +1,19 @@
+<mat-list-item class="repo-item" *ngIf="item">
+    <img matListAvatar [src]="item?.owner?.avatar_url" alt=" {{item?.name}}">
+    <a matLine target="_blank" href="{{item.html_url}}"> {{item?.name}} </a>
+    <p matLine>
+        <span class="item-desc"> {{item?.description | slice:0:100}}
+            {{item?.description?.length > 100?'....':''}}</span>
+    </p>
+
+    <p>
+        <button mat-icon-button (click)="star_repo()">
+            <mat-icon [ngClass]="{'item-star':isStarred(),'item-unstar':!isStarred()}" matBadgeOverlap="false"
+                matBadge="{{item?.stargazers_count | starsPipe}}" matBadgeSize="large" matBadgePosition="above before">
+                star</mat-icon>
+        </button>
+
+    </p>
+
+
+</mat-list-item>

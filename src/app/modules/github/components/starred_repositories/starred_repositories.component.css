@@ -1,0 +1,11 @@
+
+.no-repos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    font-weight: bold;
+    color:#ccc;
+    height: 100px;
+}

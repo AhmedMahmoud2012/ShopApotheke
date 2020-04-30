@@ -1,0 +1,23 @@
+:host{
+    position: static;
+}
+@media only screen and (max-width: 600px) {
+    #filters-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }    
+}
+
+@media only screen and (min-width: 768px) {
+    #filters-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }  
+}
+
+.flex-item{
+    margin: 10px;
+}

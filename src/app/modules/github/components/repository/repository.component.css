@@ -1,0 +1,27 @@
+.repo-item{
+    height: 79px;
+    margin: 5px auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+mat-list-item{
+   height: 100px !important;
+}
+
+.item-desc{
+    display:inline-block;
+    min-width: 90vh;
+}
+
+
+.item-star{
+    color:#f1c40f;
+}
+.item-unstar{
+    color:#ccc;
+}
+
+:host /deep/ .mat-badge-content{
+    font-size: 10px;
+}

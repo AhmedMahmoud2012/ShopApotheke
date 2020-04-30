@@ -1,0 +1,5 @@
+<mat-toolbar>{{title}}</mat-toolbar>
+
+<mat-progress-bar *ngIf="(appService?.loading$ | async)" mode="indeterminate"></mat-progress-bar>
+
+<app-github-container></app-github-container>

@@ -1,0 +1,35 @@
+<div>
+    <div id="filters-container" [formGroup]="dataRangeFrom">
+        <div class="flex-item">
+            <mat-form-field appearance="outline">
+                <mat-label>Language</mat-label>
+                <mat-select formControlName="lang">
+                    <mat-option value="all">---ALL---</mat-option>
+                    <mat-option *ngFor="let lang of languages" [value]="lang.name">
+                        {{lang.label}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="flex-item">
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="startDate" [matDatepicker]="startDate">
+                <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+                <mat-datepicker #startDate></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="flex-item">
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="endDate" [matDatepicker]="endDate">
+                <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+                <mat-datepicker #endDate></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="flex-item">
+            <button mat-icon-button [disabled]="dataRangeFrom.invalid" (click)="applyFilter()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>

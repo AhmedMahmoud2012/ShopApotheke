@@ -1,0 +1,9 @@
+<div class="list-container">
+
+    <mat-list *ngIf="items?.length else noRepo">
+        <app-repository *ngFor="let item of items" (change)="load()" [item]="item"></app-repository>
+    </mat-list>
+    <ng-template #noRepo>
+        <p class="no-repos">You don't have starred repositories</p>
+    </ng-template>
+</div>
